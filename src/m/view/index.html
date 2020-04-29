@@ -1,0 +1,260 @@
+<test>
+  {%
+  set bannerList = [{
+  "id": 15,
+  "banner_img": "/upload/banner/20200425/15877785345936.jpg"
+  },
+  {
+  "id": 16,
+  "banner_img": "/upload/banner/20200425/15877785456283.png"
+  },
+  {
+  "id": 17,
+  "banner_img": "/upload/banner/20200425/15877785672548.png"
+  },
+  {
+  "id": 18,
+  "banner_img": "/upload/banner/20200425/15877785813575.png"
+  }
+  ]
+  %}
+</test>
+<test>
+  {%
+  set horn = {
+  "id": 15,
+  "btn_name": "小喇叭",
+  "icon_img": "/upload/banner/20200425/15877785991285.png",
+  "video_url": "/upload/horn",
+  "content": "小喇叭开始广播啦！点击下方产品知识模块，点击开发专属科室学习模块，您将感受到中药配方颗粒E-learning提供的最新培训，向下滑您还将看到更多更精彩的开发不同科室的技能。总之还是那句话：做微课我们是用心的！"
+  
+  }
+  %}
+</test>
+<test>
+  {%
+  set departmentList = [{
+  "id": 15,
+  "title":'推荐',
+  "banner_img": "/upload/department/20200425/15877932799916.jpg",
+  "sort": 1,
+  "url": "../pediatric/pediatric.html"
+  },
+  {
+  "id": 16,
+  "title":'膏方',
+  "banner_img": "/upload/department/20200425/15877932977476.png",
+  "sort": 2,
+  "url": "../pediatric/pediatric.html"
+  },
+  {
+  "id": 17,
+  "title":'儿科',
+  "banner_img": "/upload/department/20200425/15877933134763.png",
+  "sort": 3,
+  "url": "../pediatric/pediatric.html"
+  },
+  {
+  "id": 18,
+  "title":'肛肠科',
+  "banner_img": "/upload/department/20200425/15877933319490.png",
+  "sort": 4,
+  "url": "../pediatric/pediatric.html"
+  }
+  ]
+  %}
+</test>
+<test>
+  {%
+  set smallclassList = [{
+  "id": 15,
+  "banner_img": "/upload/smallclass/20200425/15877970283255.png",
+  "sort": 1,
+  "url": "../pediatric/pediatric.html"
+  },
+  {
+  "id": 16,
+  "banner_img": "/upload/smallclass/20200425/15877970073057.png",
+  "sort": 2,
+  "url": "../pediatric/pediatric.html"
+  },
+  {
+  "id": 17,
+  "banner_img": "/upload/smallclass/20200425/15877970627404.png",
+  "sort": 3,
+  "url": "../pediatric/pediatric.html"
+  }
+  ]
+  %}
+</test>
+<test>
+  {%
+  set electiveList = [{
+  "id": 15,
+  "banner_img": "/upload/elective/20200425/15877970967893.png",
+  "sort": 1,
+  "url": "../pediatric/pediatric.html"
+  },
+  {
+  "id": 16,
+  "banner_img": "/upload/elective/20200425/15877971297873.png",
+  "sort": 2,
+  "url": "../pediatric/pediatric.html"
+  },
+  {
+  "id": 17,
+  "banner_img": "/upload/elective/20200425/15877971635332.png ",
+  "sort": 3,
+  "url": "../pediatric/pediatric.html"
+  },
+  {
+  "id": 18,
+  "banner_img": "/upload/elective/20200425/15877972129469.png",
+  "sort": 4,
+  "url": "../pediatric/pediatric.html"
+  }
+  ]
+  %}
+</test>
+
+<test>
+  {%
+  set iconList = [{
+  "id": 15,
+  "icon_img": "/static/m/img/index/zscb.png",
+  "url": ""
+  },
+  {
+  "id": 16,
+  "icon_img": "/static/m/img/index/canp.jpg",
+  "url": "/m/course?type=2"
+  },
+  {
+  "id": 17,
+  "icon_img": "/static/m/img/index/xiaox.jpg",
+  "url": ""
+  },
+  {
+  "id": 18,
+  "icon_img": "/static/m/img/index/kec.jpg",
+  "url": "/m/course?type=1"
+  }
+  ]
+  %}
+</test>
+
+{% extends "./common/base.html" %}
+{% set swiper = true %}
+{% set nullNvabar = true %}
+
+{% block pageBody %}
+<div id="app">
+  
+  <div class="notic-box">
+    <div class="gongGao">
+      <img src="/static/m/img/index/voice.png" class="gg-img">
+    </div>
+    <div class="gundong-text">
+      <div class="radio-icon isStop">
+        <img src="{{horn.icon_img}}" class="laba-img">
+      </div>
+      <div></div>
+      <marquee scrollamount="3"><span class="message-text">{{horn.content}}</span>
+      </marquee>
+    </div>
+  </div>
+  <audio src="/static/m/video/voice.wav" controls="controls" preload autoplay id="wavFileId" hidden>
+  </audio>
+  
+  <!--    轮播图-->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      {% for item in bannerList %}
+      <div class="swiper-slide">
+        <div class="img-fix">
+          <div class="img-inner">
+            <img src="{{item.banner_img}}" class="img">
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <!--    所有课程-->
+  <div class="wrap">
+    <div class="father">
+      <div class="son">
+        {% for item in iconList %}
+        <a href="{{item.url}}"><img src="{{item.icon_img}}" alt="" class="big"></a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  <!--    开发专属科室-->
+  <div class="develop-box">
+    <div class="develop-box-stu">
+      <div class="develop-box-more">
+        <p><img src="/static/m/img/index/sq.png">开发专属科室学习</p>
+        <a href="/m/course?type=1">
+          <p style="font-size: 15px; line-height: 30px; color: red;">更多></p>
+        </a>
+      </div>
+    </div>
+    
+    <div class="menu-box">
+      {% for item in departmentList%}
+      <div class="menu-ele department menu{{item.sort}} {%if item.sort == 1 %}menucheck{% endif %}" data-menu="{{item.sort}}" data-img="{{item.banner_img}}">
+         <span>{{item.title}}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="message-model" onclick="noticeLink()">
+      <div class="message-left">
+        <img class="banner-img" src="{{departmentList[0].banner_img}}">
+      </div>
+    </div>
+  </div>
+  
+  <!--    精品微课-->
+  <div style="text-align:center; background-color: white; margin-top: 10px; ">
+    <div class="kc-title">
+      <div class="icon-title"><img src="/static/m/img/index/jpwk.png" style="width: 80%;vertical-align: middle;">
+      </div>
+      <a href="/m/course?type=3">
+        <span style="font-size: 15px; line-height: 30px; color: red;">更多></span>
+      </a>
+    </div>
+    <div class="swiper-containers">
+      {% for item in smallclassList %}
+      <div class="swiper-wrapper">
+        <a href="/m/smallclass?type={{item.id}}" style="color: #000000;">
+          <div class="swiper-slide">
+            <img src="{{item.banner_img}}">
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <!--    选修课-->
+  <div style="text-align:center; background-color: white; margin-top: 10px; ">
+    <div class="kc-title">
+      <div class="icon-title"><img src="/static/m/img/index/xxk.png" style="width: 80%;vertical-align: middle;"></div>
+      <a href="/m/course?type=4">
+        <span style="font-size: 15px; line-height: 30px; color: red;">更多></span>
+      </a>
+    </div>
+    {% for item in electiveList %}
+    <div class="xuanxiuke-box">
+      <a href="{{item.url}}">
+        <img src='{{item.banner_img}}'>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,229 @@
+ @import "../../css/common.less";
+
+body {
+    background-color: whitesmoke;
+    .banner-img-box {
+        width: 100%;
+        font-size: 0px;
+        img {
+            width: 100%;
+            margin: 0px;
+        }
+    }
+    .develop-box {
+        width: 100%;
+        padding: 0 12px;
+        box-sizing: border-box;
+        position: relative;
+        font-size: 18px;
+        padding-bottom: 8px;
+        background-color: white;
+        .develop-box-stu {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .develop-box-more {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+                img {
+                    width: 37%;
+                    height: 100%;
+                }
+                p {
+                    margin: 0px;
+                }
+            }
+        }
+        .swiper-container {
+            overflow-x: scroll;
+            white-space: nowrap;
+            .swiper-wrapper {
+                white-space: nowrap;
+                width: 42%;
+                margin-left: 10px;
+                display: inline-block;
+                padding-bottom: 10px;
+                .swiper-wrapper:first-child {
+                    margin-left: 0px;
+                }
+                .swiper-slide {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .swiper-text-box {
+                        width: 100%;
+                        height: 50px;
+                        display: block;
+                        flex-wrap: wrap;
+                        word-break: break-all;
+                        white-space: normal;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .swiper-text {
+                        width: 100%;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        /*超出部分隐藏*/
+                        text-overflow: ellipsis;
+                        /* 超出部分显示省略号 */
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.swiper-slide {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.swiper-slide img {
+    /* width: calc(100% - 30); */
+    width: 100%;
+    /*height: 45%;*/
+    margin-bottom: 3px;
+}
+
+.liebiao {
+    width: 100%;
+    margin-top: 10px;
+    /* margin: 10px; */
+    background-color: white;
+}
+
+
+.liebiao img {
+    /* padding: 10px; */
+    margin: 10px 0px 0px 10px;
+    width: 25%;
+}
+
+.wrap {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.father {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.son{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: white;
+    border-radius: 4px;
+}
+.son img{
+    margin:0
+}
+.son .text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    display: block;
+    overflow: hidden;
+    /*超出部分隐藏*/
+    text-overflow: ellipsis;
+    /* 超出部分显示省略号 */
+    white-space: nowrap;
+    /*规定段落中的文本不进行换行 */
+    width: 100%;
+    /*需要配合宽度来使用*/
+
+}
+
+.son .smaimg {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 14px;
+    right: 2px;
+    width: 100%;
+}
+
+.son .big {
+    padding:10px 0;
+    width: 80px;
+    height: 80px;
+}
+
+.son .right {
+    padding: 10px 0 10px 0px;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.son .smaimg img {
+    width: 95%;
+    height: 30px;
+}
+
+/* .son .smaimg a {} */
+
+.son .smaimg span {
+    width: 33%;
+}
+
+.btn-box {
+    // width: 33%;
+    overflow: hidden;
+}
+
+.btn-class {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    border-radius: 18px;
+    width: 93%;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+.btn-blue{
+    text-align: center;
+    line-height: 22px;
+    font-size:14px;
+    margin:0 8px
+}

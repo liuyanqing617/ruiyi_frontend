@@ -1,0 +1,174 @@
+<test>
+    {%
+    set bannerList = [{
+    "id": 15,
+    "img_url": "/static/m/img/elective/banner2.png"
+    }
+    ]
+    %}
+</test>
+<test>
+    {%
+        set electiveList = [{
+              "id": 15,
+              "icon_url":"/static/m/img/knowledge/nature-2.jpg",
+              "title":"新旧更迭-《本草中国》讲述在中医药文明下的繁衍生息",
+              "url":"http://video.xianjianzixun.com/217c1a54f40e4d9984bf2033f215f647/74d6991ea5de4484b61899368fea10cd-5287d2089db37e62345123a1be272f8b.mp4",
+              "btn_name":"直播间",
+              "btn_url":""
+          },
+          {
+              "id": 15,
+              "icon_url":"/static/m/img/knowledge/nature-2.jpg",
+              "title":"《本草中国》一些关于中医药的故事",
+              "url":"adawdaddawd",
+              "btn_name":"直播间",
+              "btn_url":"",
+              "img":"/static/m/img/smallclass/jixuXX.png",
+              "img_url":"/static/m/胜利iew/index.html"
+          },
+          {
+              "id": 15,
+              "icon_url":"/static/m/img/knowledge/nature-3.jpg",
+              "title":"第01集《时间》",
+              "url":"adawdaddawd",
+              "btn_name":"直播间",
+              "btn_url":"",
+              "img":"/static/m/img/elective/jixuXX.png",
+              "img_url":"/static/m/胜利iew/index.html"
+          },{
+            "id": 15,
+            "icon_url":"/static/m/img/knowledge/nature-3.jpg",
+            "title":"第02集《年华》",
+            "url":"adawdaddawd",
+            "btn_name":"直播间",
+            "btn_url":"",
+            "img":"/static/m/img/elective/jixuXX.png",
+            "img_url":"/static/m/胜利iew/index.html"
+        },          {
+            "id": 15,
+            "icon_url":"/static/m/img/knowledge/nature-3.jpg",
+            "title":"第03集《双面》",
+            "url":"adawdaddawd",
+            "btn_name":"直播间",
+            "btn_url":"",
+            "img":"/static/m/img/elective/jixuXX.png",
+            "img_url":"/static/m/胜利iew/index.html"
+        },          {
+            "id": 15,
+            "icon_url":"/static/m/img/knowledge/nature-3.jpg",
+            "title":"第04集《境界》",
+            "url":"adawdaddawd",
+            "btn_name":"直播间",
+            "btn_url":"",
+            "img":"/static/m/img/elective/jixuXX.png",
+            "img_url":"/static/m/胜利iew/index.html"
+        },          {
+            "id": 15,
+            "icon_url":"/static/m/img/knowledge/nature-3.jpg",
+            "title":"第05集《相遇》",
+            "url":"adawdaddawd",
+            "btn_name":"直播间",
+            "btn_url":"",
+            "img":"/static/m/img/elective/jixuXX.png",
+            "img_url":"/static/m/胜利iew/index.html"
+        },          {
+            "id": 15,
+            "icon_url":"/static/m/img/knowledge/nature-3.jpg",
+            "title":"第06集《根脉》",
+            "url":"adawdaddawd",
+            "btn_name":"直播间",
+            "btn_url":"",
+            "img":"/static/m/img/elective/jixuXX.png",
+            "img_url":"/static/m/胜利iew/index.html"
+        },          {
+            "id": 15,
+            "icon_url":"/static/m/img/knowledge/nature-3.jpg",
+            "title":"第07集《新生》",
+            "url":"adawdaddawd",
+            "btn_name":"直播间",
+            "btn_url":"",
+            "img":"/static/m/img/elective/jixuXX.png",
+            "img_url":"/static/m/胜利iew/index.html"
+        },          {
+            "id": 15,
+            "icon_url":"/static/m/img/knowledge/nature-3.jpg",
+            "title":"第08集《沉浮》",
+            "url":"adawdaddawd",
+            "btn_name":"直播间",
+            "btn_url":"",
+            "img":"/static/m/img/elective/jixuXX.png",
+            "img_url":"/static/m/胜利iew/index.html"
+        },{
+            "id": 15,
+            "icon_url":"/static/m/img/knowledge/nature-3.jpg",
+            "title":"第09集《有情》",
+            "url":"adawdaddawd",
+            "btn_name":"直播间",
+            "btn_url":"",
+            "img":"/static/m/img/elective/jixuXX.png",
+            "img_url":"/static/m/胜利iew/index.html"
+        },{
+            "id": 15,
+            "icon_url":"/static/m/img/knowledge/nature-3.jpg",
+            "title":"第10集《责任》",
+            "url":"adawdaddawd",
+            "btn_name":"直播间",
+            "btn_url":"",
+            "img":"/static/m/img/elective/jixuXX.png",
+            "img_url":"/static/m/胜利iew/index.html"
+        }]
+      %}    
+  </test>
+
+  <test>
+  
+    {% set title = '直播间' %}
+    {% set pageTitle = '直播间' %}
+  </test>
+
+  {% extends "../../common/base.html" %}
+  
+  {% set swiper = true %}
+  {% block pageBody %}
+  <body style="height:100%; width:100%;overflow: hidden;">
+    <!--头部-->
+    <div id="head-nav-box"></div>
+    </div>
+    
+    <!--视频播放-->
+    <div class="swiper-containers" style="display: flex; width: 100%;">
+      <div class="swiper-wrapper" style=" width: 100%; height: 100%;">
+        <div class="swiper-slide">
+          <div class="video-play">
+            <video controls="controls" id="videoId">
+              <source
+                src="http://video.xianjianzixun.com/84f9b07f9d0a4879a11d0263ba96b1d1/3c2779729255424c9cbdea345ba14cad-699a80a29a15c59c9d0868389f86cc3f.mp4"
+                type="video/mp4"/>
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="title">《本草中国:关于中医药的故事》</div>
+    
+    <!--视频标题轮播-->
+    <div class="video-list">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {% for item in electiveList%}
+          <div class="swiper-slide" style="background-image:url({{item.icon_url}})" data-url="{{item.url}}"
+               type="video/mp4">
+               <span></span>
+            <div class="text">{{item.title}}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!--  底部-->
+    <div class="page fixclear">
+      <img src="/static/m/img/knowledge/china.png" alt="">
+    </div>
+  {% endblock %}

@@ -1,0 +1,36 @@
+<test>
+  {%
+  set  BgimgList = [{
+  "id": 15,
+  "img_url": "/static/m/img/smallclass/BG.png"
+  }
+  ]
+  %}
+</test>
+
+<test>
+  {% set title = '精品微课-竞争销售' %}
+  {% set pageTitle = '精品微课-竞争销售' %}
+</test>
+
+{% extends "../common/base.html" %}
+
+{% block pageBody %}
+<div id="app">
+	<div class='bac' style="width: 100%;">
+	{% for item in BgimgList %}
+	    <img src="{{item.img_url}}" alt="" style="background-attachment:fixed;width:100%;">
+	{% endfor %}
+	    <div class="ceshi">
+	      
+	        <img src="/static/m/img/smallclass/letter.png" alt="" class="gkxin">
+	        <img src="/static/m/img/smallclass/shuipingCS.gif" alt="" class="shuiping">
+	        <img src="/static/m/img/smallclass/tigaoxunlianh.png" alt="" id="tigao">
+	      
+	    </div>
+	    <div class="next-class">
+	        <img src="/static/m/img/common/xiayiKC.png" alt="">
+	    </div>
+	</div>
+</div>
+{% endblock %}

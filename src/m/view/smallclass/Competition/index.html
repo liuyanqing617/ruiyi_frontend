@@ -1,0 +1,86 @@
+<test>
+    {%
+    set bannerList = [{
+    "id": 15,
+    "img_url": "/static/m/img/elective/banner2.png"
+    }
+    ]
+    %}
+</test>
+<test>
+    {%
+        set electiveList = [{
+              "id": 15,
+              "icon_url":"/static/m/img/smallclass/fy.png",
+              "title":"《费用型区域竞争》",
+              "url":"adawdaddawd",
+              "btn_name":"直播间",
+              "btn_url":""
+          },
+          {
+              "id": 15,
+              "icon_url":"/static/m/img/smallclass/bc.png",
+              "title":"《并存型区域竞争》",
+              "url":"adawdaddawd",
+              "btn_name":"直播间",
+              "btn_url":"",
+              "img":"/static/m/img/smallclass/jixuXX.png",
+              "img_url":"/static/m/胜利iew/index.html"
+          },
+          {
+              "id": 15,
+              "icon_url":"/static/m/img/smallclass/fyxs.png",
+              "title":"《费用+学术型区域竞争》",
+              "url":"adawdaddawd",
+              "btn_name":"直播间",
+              "btn_url":"",
+              "img":"/static/m/img/elective/jixuXX.png",
+              "img_url":"/static/m/胜利iew/index.html"
+          }
+          ]
+      %}    
+  </test>
+
+  <test>
+    {% set title = '区域基层医疗上量' %}
+    {% set pageTitle = '区域基层医疗上量' %}
+  </test>
+
+  {% extends "../../common/base.html" %}
+  
+  {% block pageBody %}
+  <div id="app">
+	
+	<!-- banner -->
+	<div class="Carousel-box">
+		<div class="banner-img-box">
+			<img src="/static/m/img/smallclass/jingzhengSL.png">
+		</div>
+	</div>	
+	
+	<!-- 课程列表 -->
+	
+	{% for item in electiveList %}
+	<div style="margin-top: 30px;" >
+		<div class="weike-list-box" >
+			<div class="course-left-box">
+				<span class="left-icon-box"><img src="{{item.icon_url}}"></span>
+			</div>
+			<div class="course-right-box">
+				<div class="right-top">
+					<span class="text course-title">{{item.title}}</span><br>
+				</div>
+				<div class="right-bottom" >
+				<a href=""><span class=" btn-coffee" style="margin-right: 10px;">{{item.btn_name}}</span></a>
+				<a href=""><span class=" btn-blue" style="margin-right: 10px;">{{item.btn_name}}</span></a>
+				<a href=""><span class=" btn-red">{{item.btn_name}}</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+    <div class="out" id='out2' onClick="history.go(-1)">
+        <img src="/static/m/img/common/jixuXX.png">
+    </div>
+</div>
+  {% endblock %}

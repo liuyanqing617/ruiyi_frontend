@@ -1,0 +1,85 @@
+<test>
+    {%
+    set courseList = [{
+    "id": 18,
+    "title": "消息通知",
+    "sort": 1,
+    "url": ""
+    },
+    {
+    "id": 17,
+    "title": "培训公告",
+    "sort": 2,
+    "url": "/m/course?type=2"
+    }]
+    %}
+  </test>
+  <test>
+    {%
+    set departmentList = [{
+      "id": 15,
+      "title":'《中药配方颗粒微课全新上线》',
+      "icon_url": "/static/m/img/news/xiaoxi2.png",
+      "sort": 1,
+      "url": ""
+    }]
+    %}
+  </test>
+  <test>
+    {%
+    set productList = [{
+    "id": 15,
+    "title":'《线上微课助力中药配方颗粒一线营销》',
+    "icon_url": "/static/m/img/news/2020.png",
+    "sort": 1,
+    "url": ""
+    }]
+    %}
+  </test>
+  {% extends "../common/base.html" %}
+  {% set pageTitle = '/m/index' %}
+  {% set pageTitle = '消息公告' %}
+  {% block pageBody %}
+  <div id="app">
+        <!--      课程导航-->
+        <div class="navbar">
+          {% for item in courseList %}
+          <span class="btnfont menu{{item.sort}} course-btn {%if item.sort == 1 %}menu-check{% endif %}" data-sort="{{item.sort}}">{{item.title}}</span>
+          {% endfor %}
+        </div>
+  
+       
+          {% for item in departmentList%}
+          <div class="weike-list-box-a course-switch isshow1">
+            <div class="course-left-box">
+              <img src='{{item.icon_url}}'>
+            </div>
+            <div class="message-content">
+              <p class="course-titless">{{item.title}}</p>
+            </div>
+              <div class="message-right">
+                <img src="/static/m/img/news/right.png" alt="">
+              </div>
+  
+          </div>
+          {% endfor %}
+  
+  
+          <div class="weike-box course-switch isshow2">
+              {% for item in productList%}
+              <div class="weike-list-box-b">
+              <div class="course-left-box">
+                  <img src='{{item.icon_url}}'>
+              </div>
+              <div class="message-content">
+                  <p class="course-titless">{{item.title}}</p>
+              </div>
+              <div class="message-right">
+                  <img src="/static/m/img/news/right.png" alt="">
+                  </div>
+              </div>
+              {% endfor %}
+          </div>
+  
+  </div>
+  {% endblock %}

@@ -1,0 +1,147 @@
+@import "../../css/common.less";
+
+body {
+    background: #f7f7f7;
+    height:100vh;
+}
+
+// #app{
+//     min-height: 100vh;
+//     background-color: #eeeeee;
+// }
+
+.banner-img-box{
+    width: 100%;
+}
+.banner-img-box img{
+    width: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrap {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: -60px;
+}
+
+.father {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.son {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.son .text {
+    font-size: 18px;
+    font-weight: 600;	
+    color: #000;
+    display: block;
+    overflow: hidden;/*超出部分隐藏*/
+    text-overflow:ellipsis;/* 超出部分显示省略号 */
+    white-space: nowrap;/*规定段落中的文本不进行换行 */
+    width:  100%;/*需要配合宽度来使用*/
+
+}
+
+.son .smaimg {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 14px;
+    right: 2px;
+    width: 100%;
+}
+
+.son .big {
+    padding: 15px;
+    width: 80px;
+    height: 80px;
+}
+
+.son .right {
+    padding: 15px 0 20px 0px;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.son .smaimg img {
+    width: 95%;
+    height: 30px;
+}
+
+.son .smaimg span{
+    width: 33%;
+}
+.btn-box{
+    overflow: hidden;
+}
+.btn-class{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    border-radius: 18px;
+    width: 93%;
+    font-size:16px;
+    overflow: hidden;
+}
+.btn-class1{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border-radius: 18px;
+    width: 93%;
+    font-size:16px;
+    overflow: hidden;
+}
+
+.out{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+.btn-red {
+color: red;
+border: 1px solid red;
+font-weight: 600;
+border-radius: 16px;
+font-size: 14px;
+padding: 4px 10px;
+text-align: center;
+margin-right: 10px;
+}
+
+.wrap{
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: -60px; 
+}

@@ -1,0 +1,85 @@
+<test>
+  {%
+  set smallclassList = [{
+  "id": 15,
+  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "title":"你是谁",
+  "icon_btn":"背景"
+  },{
+  "id": 15,
+  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "title":"你是谁",
+  "icon_btn":"背景"
+  },{
+  "id": 15,
+  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "title":"你是谁",
+  "icon_btn":"背景"
+  },{
+  "id": 15,
+  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "title":"你是谁",
+  "icon_btn":"背景"
+  },{
+  "id": 15,
+  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "title":"你是谁",
+  "icon_btn":"背景"
+  },{
+  "id": 15,
+  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "title":"你是谁",
+  "icon_btn":"背景"
+  },{
+  "id": 15,
+  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "title":"你是谁",
+  "icon_btn":"背景"
+  }
+  
+  
+  ]
+  %}
+</test>
+
+<test>
+  {% set title = '精品微课-情景销售' %}
+  {% set pageTitle = '精品微课-情景销售' %}
+</test>
+
+{% extends "../common/base.html" %}
+
+{% block pageBody %}
+<div id="app">
+	
+	<!-- banner -->
+	<div class="Carousel-box">
+		<div class="banner-img-box">
+			<img src="/static/m/img/smallclass/QJbanner.jpg">
+		</div>
+	</div>	
+	
+	<!-- 课程列表 -->
+	
+	{% for item in smallclassList %}
+	<div style="margin-top: 30px;" >
+		<div class="weike-list-box" >
+			<div class="course-left-box">
+				<span class="left-icon-box"><img src="{{item.icon_url}}"></span>
+			</div>
+			<div class="course-right-box">
+				<div class="right-top">
+					<span class="text course-title">{{item.title}}</span><br>
+				</div>
+				<div class="right-bottom" >
+				<a href=""><span class=" btn-coffee" style="margin-right: 10px;">{{item.icon_btn}}</span></a>
+				<a href=""><span class=" btn-blue" style="margin-right: 10px;">{{item.icon_btn}}</span></a>
+				<a href=""><span class=" btn-red">{{item.icon_btn}}</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+	
+</div>
+{% endblock %}

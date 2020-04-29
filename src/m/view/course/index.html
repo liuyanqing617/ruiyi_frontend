@@ -1,0 +1,217 @@
+<test>
+  {%
+  set courseList = [{
+  "id": 18,
+  "title": "专属科室",
+  "sort": 1,
+  "icon_img": "/upload/course/20200425/15878008664642.png"
+  },
+  {
+  "id": 17,
+  "title": "产品知识",
+  "sort": 2,
+  "icon_img": "/upload/course/20200425/15878009073531.png"
+  },
+  {
+  "id": 16,
+  "title": "精品微课",
+  "sort": 3,
+  "icon_img": "/upload/course/20200425/15878009475497.png"
+  },
+  {
+  "id": 15,
+  "title": "选修课",
+  "sort": 4,
+  "icon_img": "/upload/course/20200425/15878009844424.png"
+  }
+  ]
+  %}
+</test>
+<test>
+  {%
+  set departmentList = [{
+  "id": 15,
+  "title":'推荐',
+  "banner_img": "/upload/department/20200425/15877932799916.jpg",
+  "sort": 1,
+  "url": "/department/list?type=15"
+  },
+  {
+  "id": 16,
+  "title":'膏方',
+  "banner_img": "/upload/department/20200425/15877932977476.png",
+  "sort": 2,
+  "url": "/department/list?type=16"
+  },
+  {
+  "id": 17,
+  "title":'儿科',
+  "banner_img": "/upload/department/20200425/15877933134763.png",
+  "sort": 3,
+  "url": "/department/list?type=17"
+  },
+  {
+  "id": 18,
+  "title":'肛肠科',
+  "banner_img": "/upload/department/20200425/15877933319490.png",
+  "sort": 4,
+  "url": "/department/list?type=18"
+  }
+  ]
+  %}
+</test>
+<test>
+  {%
+  set productList = [{
+  "id": 15,
+  "title":'《中药配方颗粒产品介绍》',
+  "icon_img": "/upload/smallclass/20200425/15877970073057.png",
+  "sort": 1,
+  "url": "/product/list?type=15"
+  },
+  {
+  "id": 16,
+  "title":'《膏方的临床推广》',
+  "icon_img": "/upload/smallclass/20200425/15877970073057.png",
+  "sort": 2,
+  "url": "/product/list?type=16"
+  },
+  {
+  "id": 17,
+  "title":'《三九配方颗粒资料汇总》',
+  "icon_img": "/upload/smallclass/20200425/15877970073057.png",
+  "sort": 3,
+  "url": "/product/list?type=17"
+  }
+  ]
+  %}
+</test>
+<test>
+  {%
+  set smallclassList = [{
+  "id": 15,
+  "title":'情景销售',
+  "banner_img": "/upload/smallclass/20200425/15877970283255.png",
+  "sort": 1,
+  "url": "/smallclass/list?type=15"
+  },
+  {
+  "id": 16,
+  "title":'竞争销售',
+  "banner_img": "/upload/smallclass/20200425/15877970073057.png",
+  "sort": 2,
+  "url": "/smallclass/list?type=16"
+  },
+  {
+  "id": 17,
+  "title":'区域基础医疗上量',
+  "banner_img": "/upload/smallclass/20200425/15877970627404.png",
+  "sort": 3,
+  "url": "/smallclass/list?type=17"
+  }
+  ]
+  %}
+</test>
+<test>
+  {%
+  set electiveList = [{
+  "id": 15,
+  "banner_img": "/upload/elective/20200425/15877970967893.png",
+  "sort": 1,
+  "url": "/elective/list?type=15"
+  },
+  {
+  "id": 16,
+  "banner_img": "/upload/elective/20200425/15877971297873.png",
+  "sort": 2,
+  "url": "/elective/list?type=16"
+  },
+  {
+  "id": 17,
+  "banner_img": "/upload/elective/20200425/15877971635332.png ",
+  "sort": 3,
+  "url": "/elective/list?type=17"
+  },
+  {
+  "id": 18,
+  "banner_img": "/upload/elective/20200425/15877972129469.png",
+  "sort": 4,
+  "url": "/elective/list?type=18"
+  }
+  ]
+  %}
+</test>
+{% extends "../common/base.html" %}
+{% set pageTitle = '/m/index' %}
+{% set pageTitle = '课程' %}
+{% block pageBody %}
+<div id="app">
+  <div class="container-fluid">
+    <div class="page">
+      <!--      课程导航-->
+      <div class="navbar">
+        {% for item in courseList %}
+        <span class="btnfont menu{{item.sort}} course-btn" data-sort="{{item.sort}}"><img src="{{item.icon_img}}"><br>{{item.title}}</span>
+        {% endfor %}
+      </div>
+  
+      <!--      精品微课-->
+      <div class="weike-box course-switch isshow1">
+        {% for item in smallclassList%}
+        <div class="weike-list-box">
+          <div class="course-left-box">
+            <img src='{{item.banner_img}}'>
+          </div>
+          <div class="course-right-box">
+            <div class="course-titless">{{item.title}}</div>
+            <div class="right-bottom" @click="courseLink(item)">
+              <span class="course-btn btn-red">课程学习</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+  
+      <!--      产品知识-->
+      <div class="weike-box course-switch isshow2">
+        {% for item in productList%}
+        <div class="weike-list-box">
+          <div class="course-left-box">
+            <img src='{{item.icon_img}}'>
+          </div>
+          <div class="course-right-box">
+            <div class="course-titless">{{item.title}}</div>
+            <div class="right-bottom" @click="courseLink(item)">
+              <span class="course-btn btn-red">PPT</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+      <!--      专属科室-->
+      <div class="xuanxiuke-box course-switch isshow3" style="display: block">
+        {% for item in departmentList%}
+        <div class="list-model-box">
+          <a href="{{item.url}}">
+            <img src="{{item.banner_img}}">
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      
+      <!--      选修课-->
+      <div class="xuanxiuke-box course-switch isshow4">
+        {% for item in electiveList%}
+        <div class="list-model-box">
+          <a href="{{item.url}}">
+            <img src="{{item.banner_img}}">
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    
+    </div>
+  </div>
+</div>
+{% endblock %}

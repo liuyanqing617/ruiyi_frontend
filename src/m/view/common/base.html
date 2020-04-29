@@ -1,0 +1,17 @@
+{% include './header.html' %}   <!--头文件-->
+
+
+{% block pageHeader %}
+
+  {% if nullNvabar != true %}
+  {% include './navbar.html' %}   <!--导航文件-->
+  {% endif %}
+
+{% endblock %}
+
+
+{% block pageBody %}
+{% endblock %}
+
+
+{% include './footer.html' %}    <!--底部文件-->

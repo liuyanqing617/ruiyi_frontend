@@ -1,0 +1,169 @@
+/* --- 自定义 以_开头 ---------------------------- */
+//@_fontSizeXXXS: 10px;
+//@_fontSizeXXS: 11px;
+//@_fontSizeXS: 12px;
+//@_fontSizeS: 13px;
+//@_fontSize: 14px;
+//@_fontSizeL: 15px;
+//@_fontSizeXL: 16px;
+//@_fontSizeXXL: 17px;
+//@_fontSizeXXXL: 18px;
+//@_fontSizeMax: 19px;
+//@_fontSizeMaxX: 20px;
+//@_fontSizeMaxXX: 22px;
+//@_fontSizeMaxXXX: 25px;
+
+@_fontSizeXXXS: 10px;
+@_fontSizeXXS: 11px;
+@_fontSizeXS: 12px;
+@_fontSizeS: 12px;
+@_fontSize: 13px;
+@_fontSizeL: 13px;
+@_fontSizeXL: 14px;
+@_fontSizeXXL: 15px;
+@_fontSizeXXXL: 16px;
+@_fontSizeMax: 17px;
+@_fontSizeMaxX: 18px;
+@_fontSizeMaxXX: 19px;
+@_fontSizeMaxXXX: 20px;
+
+@_fontFamilyCh: '微软雅黑';
+@_fontFamilyEn: 'Arial';
+
+
+// color
+//1).增加一定数值的颜色饱和度：saturate()
+//2).降低一定数值的颜色饱和度：desaturate()
+//3).增加一定数值的颜色亮度：lighten()
+//4).降低一定数值的颜色亮度：darken()
+//5).降低颜色的透明度（或增加不透明度），令其更不透明：fadein()
+//6).增加颜色的透明度（或降低不透明的），令其更透明：fadeout()
+//7).给颜色（包括不透明的颜色）设定一定数值的透明度：fade()
+//8）.任意方向旋转颜色的色相角度（hue angle）:spin()
+//9).根据比例混合两种颜色，包括计算不透明度：mix()
+//10).完全移除颜色的饱和度，与desaturate(@colo,100%)函数效果相同：greyscale()
+//11).选着两种颜色相比较，得出那种颜色的对比度最大就倾向于对比度最大的颜色：contrast()
+@_colorPlaceholder: #9fa0af;
+@_colorLabel: #353c44;
+@_colorPoint: #f04a70;
+@_colorMoney: #7792c1;
+@_colorBlue: #7c9ccf;
+@_colorBluePop: #4866a3;
+@_colorText: #2f2f2f;
+@_colorDesc: #a5a5a5;
+@_colorBlack: #000000;
+@_colorWhite: #FFFFFF;
+@_colorRed: #fd516b;
+
+@_colorBgYq: #ffefd2;
+@_colorBgYqLink: #ff6e3c;
+@_colorBgYqBtn: #f6bc47;
+@_colorBorderYq: #fc5b43;
+@_colorBg: #fff;
+@_colorPrimary: #316aa3;
+@_colorWarn: #ff2c6c;
+@_colorCommon: #425e8d;
+@_colorActive: @_colorPrimary;
+@_colorHead: #7a7a86;
+
+@_colorBorder: #e5e5e5;
+@_colorHover: #ff675d;
+@_colorGray: #999;
+@_colorGrayX: fade(@_colorGray, 60%);
+@_colorGrayXX: fade(@_colorGray, 30%);
+
+@_colorContentBg: #fff;
+@_colorFontWhite: #fbfbfb;
+@_colorNavbarBg: #425e8d;
+@_colorTabbarBg: #f8f8f8;
+@_colorTheme: #63abff;
+
+
+@_gap: 1.17647059em;
+@_lineHeight: 1.5;
+@_lineLeight_2: 2;
+@_indexNavbar: 3;
+@_indexTabbar: 3;
+@_indexFixed: 3;
+@_indexFixedTop: 1000;
+@_widthMax: 750px;
+
+
+/* --- weui ---------------------------- */
+
+/* weui: color */
+@weuiColorPrimary: @_colorPrimary;
+@weuiColorWarn: @_colorWarn;
+
+// link
+@weuiLinkColorDefault: #586C94;
+
+// background
+@weuiBgColorDefault: #EFEFF4;
+@weuiBgColorActive: #ECECEC;
+
+// line
+@weuiLineColorLight: #DDDDDD;
+@weuiLineColorDark: #BCBAB6;
+
+// text
+@weuiTextColorTitle: #000000;
+@weuiTextColorTips: #B2B2B2;
+@weuiTextColorWarn: @weuiColorWarn;
+@weuiTextColorGray: #999999;
+
+// index
+
+// navbar
+@_navbarBgColor: @_colorCommon;
+@_navbarHeight: 44px;
+@_navbarFontSize: @_fontSizeXXXL;
+
+// tabbar
+@_tabbarHeight: 50px;
+@_tabbarBgColor: #f8f8f8;
+@_tabbarBorderColor: #cccccc;
+@_tabbarIconColor: @_colorGray;
+@_tabbarLabelColor: @_colorGray;
+@_tabbarActiveColor: @_colorCommon;
+@_tabbarLabelSize: @_fontSizeXXXS;
+
+/*
+
+// button
+@weuiBtnHeight:46px;
+@weuiBtnFontSize:18px;
+@weuiBtnBorderRadius:5px;
+@weuiBtnDefaultGap:15px;
+@weuiBtnMiniFontSize:13px;
+@weuiBtnMiniHeight:2.3;
+
+// weui-cell
+@weuiCellGapV:10px;
+@weuiCellGapH:15px;
+@weuiCellInnerGapH:.35em;
+@weuiCellHeight: 45px;
+@weuiCellFontSize:17px;
+@weuiCellTipsFontSize:14px;
+@weuiCellLabelWidth:105px;
+
+@weuiCellLineHeight: unit((@weuiCellHeight - 2 * @weuiCellGapV) / @weuiCellFontSize); // 高度减去上下padding的行高
+@weuiCellsMarginTop:unit(20 / @weuiCellFontSize, em);
+
+// weui switch
+@weuiSwitchHeight: 32px;
+
+@weuiUploaderFileSpacing: 9px;
+@weuiUploaderSize: 79px;
+@weuiUploaderBorderWidth: 1px;
+
+// weui-msg
+@weuiMsgPaddingTop:36px;
+@weuiMsgIconGap:30px;
+@weuiMsgTitleGap:5px;
+@weuiMsgTextGap:25px;
+@weuiMsgOprGap:25px;
+@weuiMsgExtraAreaGap:15px;
+@weuiMsgExtraAreaOfMinHeight:438px;
+
+*/

@@ -1,0 +1,74 @@
+<test>
+    {%
+    set electiveBanner = "/static/m/img/product/banner01.png"
+    %}
+  </test>
+  <test>
+    {%
+    set electiveList = [{
+    "id": 15,
+    "icon_url":"/static/m/img/product/01.png",
+    "title":"《中药配方颗粒产品介绍》",
+    "url":"adawdaddawd",
+    "btn_name":"直播间",
+    "btn_url":""
+    },
+    {
+      "id": 15,
+      "icon_url":"/static/m/img/product/gaofang.png",
+      "title":"《膏方的临床推广》",
+      "url":"adawdaddawd",
+      "btn_name":"PPT",
+      "btn_url":""
+      },
+    {
+      "id": 15,
+      "icon_url":"/static/m/img/product/zhongyao.jpg",
+      "title":"《三九配方颗粒资料汇总》",
+      "url":"adawdaddawd",
+      "btn_name":"PPT",
+      "btn_url":""
+      }
+    ]
+    %}
+  </test>
+    <test>
+        {% set title = '产品知识' %}
+        {% set pageTitle = '产品知识' %}
+    </test>
+{% extends "../common/base.html" %}
+
+{% block pageBody %}
+<div>
+    <div class="Carousel-box">
+      <div class="banner-img-box">
+        <img src="{{electiveBanner}}">
+      </div>
+    </div>
+    
+    
+    <div class = 'wrap'>
+        <div class="father" id='father'>
+        {% for item in electiveList %}
+            <div class="son">
+              <img src="{{item.icon_url}}" alt="" class="big">
+                <div class="right">
+                  <span class="text">{{item.title}}</span>
+                    <div class="smaimg">
+                      <div class="btn-box">
+                        <a href="{{item.url}}">
+                          <div id='id45' class="btn-red">{{item.btn_name}}</div>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="out" id='out2' onClick="history.go(-1)">
+            <img src="/static/m/img/common/jixuXX.png">
+        </div>
+    </div>
+    
+    </div>
+{% endblock %}

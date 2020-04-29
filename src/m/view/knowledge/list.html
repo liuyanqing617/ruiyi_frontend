@@ -1,0 +1,65 @@
+<test>
+    {%
+    set electiveBanner = "/static/m/img/knowledge/banner.png"
+    %}
+  </test>
+  <test>
+    {%
+    set electiveList = [{
+    "id": 15,
+    "icon_url":"/static/m/img/knowledge/zy.png",
+    "title":"本草中国:关于中医药的故事",
+    "url":"./live/index.html",
+    "btn_name":"直播间",
+    "btn_url":"./live/index.html"
+    },
+    {
+      "id": 15,
+      "icon_url":"/static/m/img/knowledge/honghua.png",
+      "title":"中药园",
+      "url":"http://999bcw.waper.com.cn/wap/views/medicine.html?wx_head=http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erZSxHIzYan16K14k19EtMrjvC8usSgxVkpUeZUCJcgF9bIvUv9ag2MP62ysLqJspU6XGTVSf1ticQ/132&wx_nickname=%E5%8C%BB%E8%8D%AFTTT-%E5%AD%9F%E8%80%81%E5%B8%88&openid=oa2Sc1aro5fC1IjeDgkSOaOW8Hto&expires_in=3600&sa_id=90d7228f363b60ebcafe1bd06d08e1b05ac89cd448247b30c118a5d4454fd575&access_token=f785a87f65d1f77ad5a4c3ed2aad3ebe&refresh_token=2f4e67d34dd9736a0c5592d10db9f36e#/index",
+      "btn_name":"品种类别",
+      "btn_url":""
+      }
+    ]
+    %}
+  </test>
+<test>
+    {% set title = '知识储备' %}
+    {% set pageTitle = '知识储备' %}
+</test>
+{% extends "../common/base.html" %}
+{% block pageBody %}
+<div>
+<div class="Carousel-box">
+  <div class="banner-img-box">
+    <img src="{{electiveBanner}}">
+  </div>
+</div>
+
+
+<div class = 'wrap'>
+    <div class="father" id='father'>
+    {% for item in electiveList %}
+        <div class="son">
+          <img src="{{item.icon_url}}" alt="" class="big">
+            <div class="right">
+              <span class="text">{{item.title}}</span>
+                <div class="smaimg">
+                  <div class="btn-box">
+                    <a href="{{item.url}}">
+                      <div id='id45' class="btn-red">{{item.btn_name}}</div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="out" id='out2' onClick="history.go(-1)">
+        <img src="/static/m/img/common/jixuXX.png">
+    </div>
+</div>
+
+</div>
+{% endblock %}

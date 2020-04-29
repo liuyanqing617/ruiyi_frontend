@@ -1,0 +1,102 @@
+
+
+
+<test>
+    {%
+        set bannerList = [
+            {
+            "id": 15,
+            "img_url": "/static/m/img/elective/banner2.png"
+            }
+        ]
+    %}
+</test>
+<test>
+    {%
+        set electiveList = [
+            {
+                "id": 15,
+                "icon_url":"/static/m/img/elective/hdnj.png",
+                "title":"敷贴的前世",
+                "url":"adawdaddawd",
+                "btn_name":"直播间",
+                "btn_url":""
+            },
+            {
+                "id": 15,
+                "icon_url":"/static/m/img/elective/myzb.png",
+                "title":"深圳儿童医院中医科万力生主任谈小儿敷贴",
+                "url":"adawdaddawd",
+                "btn_name":"直播间",
+                "btn_url":"",
+                "img":"/static/m/img/elective/jixuXX.png",
+                "img_url":"/static/m/胜利iew/index.html"
+            },
+            {
+                "id": 15,
+                "icon_url":"/static/m/img/elective/dyzs.png",
+                "title":"【第1诊室】专家揭秘敷贴用药的真身",
+                "url":"adawdaddawd",
+                "btn_name":"直播间",
+                "btn_url":"",
+                "img":"/static/m/img/elective/jixuXX.png",
+                "img_url":"/static/m/胜利iew/index.html"
+            },{
+                "id": 15,
+                "icon_url":"/static/m/img/elective/rcz.jpg",
+                "title":"敷贴治疗小儿疾病的特点和优势",
+                "url":"adawdaddawd",
+                "btn_name":"直播间",
+                "btn_url":"",
+                "img":"/static/m/img/elective/jixuXX.png",
+                "img_url":"/static/m/胜利iew/index.html"
+            },{
+                "id": 15,
+                "icon_url":"/static/m/img/elective/msyx.png",
+                "title":"敷贴治疗小儿疾病的特点和优势",
+                "url":"adawdaddawd",
+                "btn_name":"直播间",
+                "btn_url":"",
+                "img":"/static/m/img/elective/jixuXX.png",
+                "img_url":"/static/m/胜利iew/index.html"
+            },{
+                "id": 15,
+                "icon_url":"/static/m/img/elective/dbxz.png",
+                "title":"敷贴治疗小儿疾病的特点和优势",
+                "url":"adawdaddawd",
+                "btn_name":"直播间",
+                "btn_url":"",
+                "img":"/static/m/img/elective/jixuXX.png",
+                "img_url":"/static/m/胜利iew/index.html"
+            }
+        ]
+      %}    
+</test>
+{% extends "../../common/base.html" %}
+{% set pageTitle = '/m/index' %}
+{% set pageTitle = '消息公告' %}
+{% block pageBody %}
+<div class="hegui">
+    <div class="hegui-top">
+        <img src="/static/m/img/elective/banner2.png">
+    </div>
+    {% for item in electiveList %}
+    <div class="heguis">
+        <div class="heguis-left">
+            <img src="{{item.icon_url}}" >
+        </div>
+        <div class="heguis-right">
+            <div class="heguis-right-text">{{item.title}}</div>
+            <div class="heguis-buttom">
+                <a href="">
+                    <div class="btn-red" >{{item.btn_name}}</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="out backUpPage">
+        <img src="/static/m/img/common/jixuXX.png">
+    </div>
+</div>
+{% endblock %}
