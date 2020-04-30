@@ -2,19 +2,19 @@
   {%
   set bannerList = [{
   "id": 15,
-  "banner_img": "/upload/banner/20200425/15877785345936.jpg"
+  "banner_img": "/upload/res/20200427/15879736373898.png"
   },
   {
   "id": 16,
-  "banner_img": "/upload/banner/20200425/15877785456283.png"
+  "banner_img": "/upload/res/20200427/15879736219058.png"
   },
   {
   "id": 17,
-  "banner_img": "/upload/banner/20200425/15877785672548.png"
+  "banner_img": "/upload/res/20200427/15879736055064.png"
   },
   {
   "id": 18,
-  "banner_img": "/upload/banner/20200425/15877785813575.png"
+  "banner_img": "/upload/res/20200427/15879734705444.jpg"
   }
   ]
   %}
@@ -24,7 +24,7 @@
   set horn = {
   "id": 15,
   "btn_name": "小喇叭",
-  "icon_img": "/upload/banner/20200425/15877785991285.png",
+  "icon_img": "/upload/banner/20200428/15880495559469.png",
   "video_url": "/upload/horn",
   "content": "小喇叭开始广播啦！点击下方产品知识模块，点击开发专属科室学习模块，您将感受到中药配方颗粒E-learning提供的最新培训，向下滑您还将看到更多更精彩的开发不同科室的技能。总之还是那句话：做微课我们是用心的！"
   
@@ -35,31 +35,31 @@
   {%
   set departmentList = [{
   "id": 15,
-  "title":'推荐',
-  "banner_img": "/upload/department/20200425/15877932799916.jpg",
+  "title":'膏方',
+  "banner_img": "/upload/smallclass/20200428/15880676483941.png",
   "sort": 1,
-  "url": "../pediatric/pediatric.html"
+  "url": "/m/department"
   },
   {
   "id": 16,
-  "title":'膏方',
-  "banner_img": "/upload/department/20200425/15877932977476.png",
+  "title":'敷贴',
+  "banner_img": "/upload/smallclass/20200428/15880679173895.png",
   "sort": 2,
-  "url": "../pediatric/pediatric.html"
+  "url": "/m/department"
   },
   {
   "id": 17,
   "title":'儿科',
-  "banner_img": "/upload/department/20200425/15877933134763.png",
+  "banner_img": "/upload/smallclass/20200428/15880679384594.png",
   "sort": 3,
-  "url": "../pediatric/pediatric.html"
+  "url": "/m/department"
   },
   {
   "id": 18,
   "title":'肛肠科',
-  "banner_img": "/upload/department/20200425/15877933319490.png",
+  "banner_img": "/upload/smallclass/20200428/15880679623625.png",
   "sort": 4,
-  "url": "../pediatric/pediatric.html"
+  "url": "/m/department"
   }
   ]
   %}
@@ -68,21 +68,24 @@
   {%
   set smallclassList = [{
   "id": 15,
-  "banner_img": "/upload/smallclass/20200425/15877970283255.png",
+  "title":'情景销售',
+  "banner_img": "/upload/smallclass/20200429/15881444984347.png",
   "sort": 1,
-  "url": "../pediatric/pediatric.html"
+  "url": "/m/smallclass"
   },
   {
   "id": 16,
-  "banner_img": "/upload/smallclass/20200425/15877970073057.png",
+  "title":'竞争销售',
+  "banner_img": "/upload/smallclass/20200429/15881445121297.png",
   "sort": 2,
-  "url": "../pediatric/pediatric.html"
+  "url": "/m/smallclass"
   },
   {
   "id": 17,
-  "banner_img": "/upload/smallclass/20200425/15877970627404.png",
+  "title":'基础医疗',
+  "banner_img": "/upload/smallclass/20200429/15881445312332.png",
   "sort": 3,
-  "url": "../pediatric/pediatric.html"
+  "url": "/m/smallclass"
   }
   ]
   %}
@@ -91,38 +94,32 @@
   {%
   set electiveList = [{
   "id": 15,
-  "banner_img": "/upload/elective/20200425/15877970967893.png",
+  "banner_img": "/upload/smallclass/20200428/15880683106367.png",
   "sort": 1,
   "url": "../pediatric/pediatric.html"
   },
   {
   "id": 16,
-  "banner_img": "/upload/elective/20200425/15877971297873.png",
+  "banner_img": "/upload/smallclass/20200428/15880683414325.png",
   "sort": 2,
   "url": "../pediatric/pediatric.html"
   },
   {
   "id": 17,
-  "banner_img": "/upload/elective/20200425/15877971635332.png ",
+  "banner_img": "/upload/smallclass/20200428/15880683824284.png",
   "sort": 3,
-  "url": "../pediatric/pediatric.html"
-  },
-  {
-  "id": 18,
-  "banner_img": "/upload/elective/20200425/15877972129469.png",
-  "sort": 4,
   "url": "../pediatric/pediatric.html"
   }
   ]
   %}
 </test>
-
 <test>
   {%
-  set iconList = [{
+  set iconList = [
+  {
   "id": 15,
   "icon_img": "/static/m/img/index/zscb.png",
-  "url": ""
+  "url": "/m/knowledge"
   },
   {
   "id": 16,
@@ -132,7 +129,7 @@
   {
   "id": 17,
   "icon_img": "/static/m/img/index/xiaox.jpg",
-  "url": ""
+  "url": "/m/notice"
   },
   {
   "id": 18,
@@ -150,20 +147,20 @@
 {% block pageBody %}
 <div id="app">
   
-  <div class="notic-box">
-    <div class="gongGao">
-      <img src="/static/m/img/index/voice.png" class="gg-img">
+  <!--  小喇叭-->
+  <div class="horn-box view-port">
+    <div class="voice-img">
+      <img src="/static/m/img/index/voice.png">
     </div>
-    <div class="gundong-text">
-      <div class="radio-icon isStop">
-        <img src="{{horn.icon_img}}" class="laba-img">
+    <div class="horn-text">
+      <div class="horn-icon">
+        <img src="{{horn.icon_img}}">
       </div>
-      <div></div>
-      <marquee scrollamount="3"><span class="message-text">{{horn.content}}</span>
+      <marquee scrollamount="3"><span>{{horn.content}}</span>
       </marquee>
     </div>
   </div>
-  <audio src="/static/m/video/voice.wav" controls="controls" preload autoplay id="wavFileId" hidden>
+  <audio src="/static/m/video/voice.wav" controls="controls" id="wavFileId" preload autoplay hidden>
   </audio>
   
   <!--    轮播图-->
@@ -182,54 +179,50 @@
   </div>
   
   <!--    所有课程-->
-  <div class="wrap">
-    <div class="father">
-      <div class="son">
-        {% for item in iconList %}
-        <a href="{{item.url}}"><img src="{{item.icon_img}}" alt="" class="big"></a>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-  
-  <!--    开发专属科室-->
-  <div class="develop-box">
-    <div class="develop-box-stu">
-      <div class="develop-box-more">
-        <p><img src="/static/m/img/index/sq.png">开发专属科室学习</p>
-        <a href="/m/course?type=1">
-          <p style="font-size: 15px; line-height: 30px; color: red;">更多></p>
-        </a>
-      </div>
-    </div>
-    
-    <div class="menu-box">
-      {% for item in departmentList%}
-      <div class="menu-ele department menu{{item.sort}} {%if item.sort == 1 %}menucheck{% endif %}" data-menu="{{item.sort}}" data-img="{{item.banner_img}}">
-         <span>{{item.title}}</span>
-      </div>
+  <div class="course-box">
+    <div class="list-box">
+      {% for item in iconList %}
+      <a href="{{item.url}}"><img src="{{item.icon_img}}"></a>
       {% endfor %}
-    </div>
-    <div class="message-model" onclick="noticeLink()">
-      <div class="message-left">
-        <img class="banner-img" src="{{departmentList[0].banner_img}}">
-      </div>
     </div>
   </div>
   
   <!--    精品微课-->
-  <div style="text-align:center; background-color: white; margin-top: 10px; ">
-    <div class="kc-title">
-      <div class="icon-title"><img src="/static/m/img/index/jpwk.png" style="width: 80%;vertical-align: middle;">
+  <div class="smallclass-box">
+    <div class="title-box">
+      <div class="title"><img src="/static/m/img/index/sq.png">精品微课</div>
+      <a class="more" href="/m/course?type=1">更多></a>
+    </div>
+    
+    <div class="smallclass-content">
+      <div class="title-list">
+        {% for item in smallclassList%}
+        <div class="smallclass sort{{item.sort}} {%if item.sort == 1 %}active{% endif %}" data-sort="{{item.sort}}" data-img="{{item.banner_img}}">
+          <span>{{item.title}}</span>
+        </div>
+        {% endfor %}
       </div>
-      <a href="/m/course?type=3">
-        <span style="font-size: 15px; line-height: 30px; color: red;">更多></span>
-      </a>
+      {% for item in smallclassList %}
+      <div class="banner-div hide-class menu-content{{item.sort}} {%if item.sort == 1 %}show-class{% endif %}">
+        <a href="/m/smallclass?id={{item.id}}">
+          <img class="banner-img" src="{{item.banner_img}}">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <!--    开发专属科室-->
+  <div class="course-calss">
+    <div class="title-box">
+      <div class="icon-title"><img src="/static/m/img/index/title_01.png">
+      </div>
+      <a class="more" href="/m/course?type=3">更多></a>
     </div>
     <div class="swiper-containers">
-      {% for item in smallclassList %}
+      {% for item in departmentList %}
       <div class="swiper-wrapper">
-        <a href="/m/smallclass?type={{item.id}}" style="color: #000000;">
+        <a href="/m/department?id={{item.id}}">
           <div class="swiper-slide">
             <img src="{{item.banner_img}}">
           </div>
@@ -240,16 +233,14 @@
   </div>
   
   <!--    选修课-->
-  <div style="text-align:center; background-color: white; margin-top: 10px; ">
-    <div class="kc-title">
-      <div class="icon-title"><img src="/static/m/img/index/xxk.png" style="width: 80%;vertical-align: middle;"></div>
-      <a href="/m/course?type=4">
-        <span style="font-size: 15px; line-height: 30px; color: red;">更多></span>
-      </a>
+  <div class="course-calss">
+    <div class="title-box">
+      <div class="icon-title"><img src="/static/m/img/index/title_02.png"></div>
+      <a class="more" href="/m/course?type=4">更多></a>
     </div>
     {% for item in electiveList %}
-    <div class="xuanxiuke-box">
-      <a href="{{item.url}}">
+    <div class="elective-content">
+      <a href="/m/elective?id={{item.id}}">
         <img src='{{item.banner_img}}'>
       </a>
     </div>

@@ -1,5 +1,5 @@
-require('./news.less')
-const {} = require('../../js/common')
+require('./index.less')
+// const {} = require('../../js/common')
 
 $(function () {
   $('.course-btn').click(function () {

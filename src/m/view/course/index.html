@@ -142,76 +142,70 @@
   %}
 </test>
 {% extends "../common/base.html" %}
-{% set pageTitle = '/m/index' %}
-{% set pageTitle = '课程' %}
 {% block pageBody %}
 <div id="app">
-  <div class="container-fluid">
-    <div class="page">
-      <!--      课程导航-->
-      <div class="navbar">
-        {% for item in courseList %}
-        <span class="btnfont menu{{item.sort}} course-btn" data-sort="{{item.sort}}"><img src="{{item.icon_img}}"><br>{{item.title}}</span>
-        {% endfor %}
-      </div>
-  
-      <!--      精品微课-->
-      <div class="weike-box course-switch isshow1">
-        {% for item in smallclassList%}
-        <div class="weike-list-box">
-          <div class="course-left-box">
-            <img src='{{item.banner_img}}'>
-          </div>
-          <div class="course-right-box">
-            <div class="course-titless">{{item.title}}</div>
-            <div class="right-bottom" @click="courseLink(item)">
-              <span class="course-btn btn-red">课程学习</span>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-  
-      <!--      产品知识-->
-      <div class="weike-box course-switch isshow2">
-        {% for item in productList%}
-        <div class="weike-list-box">
-          <div class="course-left-box">
-            <img src='{{item.icon_img}}'>
-          </div>
-          <div class="course-right-box">
-            <div class="course-titless">{{item.title}}</div>
-            <div class="right-bottom" @click="courseLink(item)">
-              <span class="course-btn btn-red">PPT</span>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      
-      <!--      专属科室-->
-      <div class="xuanxiuke-box course-switch isshow3" style="display: block">
-        {% for item in departmentList%}
-        <div class="list-model-box">
-          <a href="{{item.url}}">
-            <img src="{{item.banner_img}}">
-          </a>
-        </div>
-        {% endfor %}
-      </div>
-      
-      <!--      选修课-->
-      <div class="xuanxiuke-box course-switch isshow4">
-        {% for item in electiveList%}
-        <div class="list-model-box">
-          <a href="{{item.url}}">
-            <img src="{{item.banner_img}}">
-          </a>
-        </div>
-        {% endfor %}
-      </div>
-    
-    </div>
+  <!--      课程导航-->
+  <div class="navbar">
+    {% for item in courseList %}
+    <span class="btnfont menu{{item.sort}} course-btn" data-sort="{{item.sort}}"><img src="{{item.icon_img}}"><br>{{item.title}}</span>
+    {% endfor %}
   </div>
+  
+  <!--      精品微课-->
+  <div class="weike-box hide-class isshow1">
+    {% for item in smallclassList%}
+    <div class="weike-list-box">
+      <div class="course-left-box">
+        <img src='{{item.banner_img}}'>
+      </div>
+      <div class="course-right-box">
+        <div class="course-titless">{{item.title}}</div>
+        <div class="right-bottom" @click="courseLink(item)">
+          <span class="course-btn btn-red">课程学习</span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!--      产品知识-->
+  <div class="weike-box hide-class isshow2">
+    {% for item in productList%}
+    <div class="weike-list-box">
+      <div class="course-left-box">
+        <img src='{{item.icon_img}}'>
+      </div>
+      <div class="course-right-box">
+        <div class="course-titless">{{item.title}}</div>
+        <div class="right-bottom" @click="courseLink(item)">
+          <span class="course-btn btn-red">PPT</span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!--      专属科室-->
+  <div class="xuanxiuke-box hide-class isshow3" style="display: block">
+    {% for item in departmentList%}
+    <div class="list-model-box">
+      <a href="{{item.url}}">
+        <img src="{{item.banner_img}}">
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!--      选修课-->
+  <div class="xuanxiuke-box hide-class isshow4">
+    {% for item in electiveList%}
+    <div class="list-model-box">
+      <a href="{{item.url}}">
+        <img src="{{item.banner_img}}">
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+    
 </div>
 {% endblock %}

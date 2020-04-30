@@ -20,7 +20,7 @@ index = argArr.indexOf('__liu')
 let isCopyToLiu = index > -1
 if (isCopyToLiu) {
   argArr.splice(index, 1)
-  copyToDir = `E:\\git\\ruiyi3\\`;
+  copyToDir = `E:\\git\\ruiyi\\`;
 }
 
 let dirList = argArr.length > 0 ? argArr : utils.getSrcDirNameList()

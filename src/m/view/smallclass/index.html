@@ -2,39 +2,53 @@
   {%
   set smallclassList = [{
   "id": 15,
-  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "icon_img":"/static/m/img/smallclass/chanpinJS.gif",
   "title":"你是谁",
-  "icon_btn":"背景"
+  "btn_name":"学习",
+  "btn2_name":"背景",
+  "btn3_name":"讲解"
   },{
   "id": 15,
-  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "icon_img":"/static/m/img/smallclass/chanpinJS.gif",
   "title":"你是谁",
-  "icon_btn":"背景"
+    "btn_name":"学习",
+    "btn2_name":"背景",
+    "btn3_name":""
   },{
   "id": 15,
-  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "icon_img":"/static/m/img/smallclass/chanpinJS.gif",
   "title":"你是谁",
-  "icon_btn":"背景"
+    "btn_name":"学习",
+    "btn2_name":"背景",
+    "btn3_name":"讲解"
   },{
   "id": 15,
-  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "icon_img":"/static/m/img/smallclass/chanpinJS.gif",
   "title":"你是谁",
-  "icon_btn":"背景"
+    "btn_name":"学习",
+    "btn2_name":"背景",
+    "btn3_name":"讲解"
   },{
   "id": 15,
-  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "icon_img":"/static/m/img/smallclass/chanpinJS.gif",
   "title":"你是谁",
-  "icon_btn":"背景"
+    "btn_name":"学习",
+    "btn2_name":"背景",
+    "btn3_name":"讲解"
   },{
   "id": 15,
-  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "icon_img":"/static/m/img/smallclass/chanpinJS.gif",
   "title":"你是谁",
-  "icon_btn":"背景"
+    "btn_name":"学习",
+    "btn2_name":"背景",
+    "btn3_name":"讲解"
   },{
   "id": 15,
-  "icon_url":"/static/m/img/smallclass/chanpinJS.gif",
+  "icon_img":"/static/m/img/smallclass/chanpinJS.gif",
   "title":"你是谁",
-  "icon_btn":"背景"
+    "btn_name":"学习",
+    "btn2_name":"背景",
+    "btn3_name":"讲解"
   }
   
   
@@ -45,6 +59,7 @@
 <test>
   {% set title = '精品微课-情景销售' %}
   {% set pageTitle = '精品微课-情景销售' %}
+  {% set banner = '/static/m/img/smallclass/QJbanner.jpg' %}
 </test>
 
 {% extends "../common/base.html" %}
@@ -55,7 +70,7 @@
 	<!-- banner -->
 	<div class="Carousel-box">
 		<div class="banner-img-box">
-			<img src="/static/m/img/smallclass/QJbanner.jpg">
+			<img src="{{banner}}">
 		</div>
 	</div>	
 	
@@ -65,16 +80,21 @@
 	<div style="margin-top: 30px;" >
 		<div class="weike-list-box" >
 			<div class="course-left-box">
-				<span class="left-icon-box"><img src="{{item.icon_url}}"></span>
+				<span class="left-icon-box"><img src="{{item.icon_img}}"></span>
 			</div>
 			<div class="course-right-box">
 				<div class="right-top">
 					<span class="text course-title">{{item.title}}</span><br>
 				</div>
 				<div class="right-bottom" >
-				<a href=""><span class=" btn-coffee" style="margin-right: 10px;">{{item.icon_btn}}</span></a>
-				<a href=""><span class=" btn-blue" style="margin-right: 10px;">{{item.icon_btn}}</span></a>
-				<a href=""><span class=" btn-red">{{item.icon_btn}}</span></a>
+                    {% if item.btn3_name %}
+				<a href=""><span class=" btn-coffee" style="margin-right: 10px;">{{item.btn3_name}}</span></a>
+                    {% endif %}
+                    {% if item.btn2_name %}
+				<a href=""><span class=" btn-blue" style="margin-right: 10px;">{{item.btn2_name}}</span></a>
+                    {% endif%}
+				<a href=""><span class=" btn-red">{{item.btn_name}}</span></a>
+
 				</div>
 			</div>
 		</div>
