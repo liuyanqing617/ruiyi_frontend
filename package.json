@@ -38,7 +38,7 @@
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.28.0",
     "http-proxy-middleware": "^0.17.3",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "koa": "^2.3.0",
     "koa-proxies": "^0.6.2",
     "koa-static": "^4.0.1",
